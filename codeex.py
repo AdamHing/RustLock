@@ -14,5 +14,5 @@ for a in df["code"]:
             
         print(a)
         print(type(a))
-        print('a')
+        print('')
 
