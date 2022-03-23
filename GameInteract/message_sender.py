@@ -69,7 +69,17 @@ def release_key(key):
 char_map = {
     'q': 0x10, 'w': 0x11, 'e': 0x12, 'r': 0x13, 't': 0x14, 'z': 0x15, 'u': 0x16, 'i': 0x17, 'o': 0x18, 'p':0x19,
     'a': 0x1E, 's': 0x1F, 'd': 0x20, 'f': 0x21, 'g': 0x22, 'h': 0x23, 'j': 0x24, 'k': 0x25, 'l': 0x26,
-    'y': 0x2C, 'x': 0x2D, 'c': 0x2E, 'v': 0x2F, 'b': 0x30, 'n': 0x31, 'm': 0x32 }
+    'y': 0x2C, 'x': 0x2D, 'c': 0x2E, 'v': 0x2F, 'b': 0x30, 'n': 0x31, 'm': 0x32 , 
+    '0': 0x30, 
+    '1': 0x31,
+    '2': 0x32,
+    '3': 0x33,
+    '4': 0x34,
+    '5': 0x35,
+    '6': 0x36,
+    '7': 0x37,
+    '8': 0x38,
+    '9': 0x39,}
 
 # Sending the message using the character map
 # get_game_window()
@@ -87,6 +97,13 @@ class keyboard_INPUT(object):
    @staticmethod
    def KEY_release(a):
       release_key(char_map[a])
+
+   @staticmethod
+   def KEY_click(a):
+      press_key(char_map[a])
+      time.sleep(0.5)
+      release_key(char_map[a])
+
 
 
 
