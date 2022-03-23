@@ -61,9 +61,6 @@ def release_key(key):
    x = Input(ctypes.c_ulong(1), ii_)
    ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
   
-# def get_game_window():
-#    w.find_window_wildcard("Minecraft 1*")    # Game window is named 'Minecraft 1.13.1' for example.
-#    w.set_foreground()
   
 # Character map
 char_map = {
@@ -80,10 +77,6 @@ char_map = {
     '7': 0x08,
     '8': 0x09,
     '9': 0x0A,}
-
-# Sending the message using the character map
-# get_game_window()
-
 
 
 class keyboard_INPUT(object):
@@ -103,20 +96,5 @@ class keyboard_INPUT(object):
       press_key(char_map[a])
       time.sleep(0.5)
       release_key(char_map[a])
-
-
-
-
-
-# press_key(char_map['t'])    # t - opens chat
-# release_key(char_map['t'])
-
-# press_key(char_map['h']);release_key(char_map['h']); # h
-# press_key(char_map['e']);release_key(char_map['e']); # e
-# press_key(char_map['l']);release_key(char_map['l']); # l
-# press_key(char_map['l']);release_key(char_map['l']); # l
-# press_key(char_map['o']);release_key(char_map['o']); # o
-
-# press_key(0x1C);release_key(0x1C); # Submit it (0x1C is ENTER key -> possible char_map extension? ;))
 
 
