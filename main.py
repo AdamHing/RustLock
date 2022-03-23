@@ -4,6 +4,7 @@ import pyautogui as pag
 
 import pandas as pd
 import math
+import keyboard
 
 
 kb = ms.keyboard_INPUT()
@@ -26,6 +27,12 @@ for a in df["code"]:
     print(asplit)
     
     
+    while True:
+
+        if keyboard.read_key() == "p":
+            print("You pressed p")
+            break
+
     for i in asplit:
         
         
@@ -38,4 +45,8 @@ for a in df["code"]:
         kb.KEY_release(i)
         print(i)
 
-    input()
+
+
+
+
+# keyboard.on_presskey("r", lambda :print("You pressed r"))pppp
