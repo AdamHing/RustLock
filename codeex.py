@@ -7,11 +7,13 @@ df = pd.read_csv("codes.csv", dtype = str)
 
 
 for a in df["code"]:
-    a = int(a.zfill(4))
+    a = (a.zfill(4))
     print(a)
-    digits = int(math.log10(a))+1
-    if digits < 4:
-            
-        print(a)
-        print(type(a))
+
+# seperation of string into vareiables
+
+# asplit = a.split()
+
+    asplit = list(map(str, a))
+    print(asplit)
 
